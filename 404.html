@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="404.png" type="image/x-icon" />
+    <!-- Icons made by Freepik from flaticon -->
+
+    <title>404 - Page Not found</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ::selection {
+        background: #838383;
+      }
+
+      :root {
+        --main-background: #313131;
+        --shadow-light: #5d5d5d;
+        --shadow-dark: #171717;
+      }
+
+      body {
+        width: 100%;
+        min-height: 100vh;
+        background: var(--main-background);
+        display: grid;
+        place-items: center;
+        font-family: sans-serif;
+        padding-inline: 0.5em;
+      }
+      main > p {
+        color: #171717;
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      }
+      main h1 {
+        font-size: clamp(10rem, 22vw, 15rem);
+        text-align: center;
+        letter-spacing: 1.2rem;
+        text-shadow: -0.02em -0.02em 0 var(--shadow-light),
+          -0.05em -0.05em 0 var(--shadow-dark),
+          -0.06em -0.06em 0 var(--shadow-light);
+        color: #272727;
+      }
+
+      a {
+        color: #5c5b5b;
+      }
+
+      .redirect-msg {
+        margin-top: 2em;
+        font-size: 1rem;
+        color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>404</h1>
+      <p>
+        Mate Looks like you lost your way? <br /><a
+          href="https://manik2375.netlify.app/"
+          >Click Here</a
+        >
+        to go back home.
+      </p>
+    </main>
+
+    <script>
+      "use strict";
+      if (window.location == "https://manik2375.github.io/") {
+        let main = document.querySelector("main");
+        let elem = document.createElement("p");
+
+        elem.innerHTML = "Redirecting to main site in <b id='seconds'>3</b> seconds...";
+
+        elem.className = "redirect-msg";
+
+        main.append(elem);
+
+        setInterval(() => {
+            let secondelem = document.getElementById('seconds');
+
+            if (!+secondelem.innerText) return;
+            document.getElementById('seconds').innerText-- 
+        }, 1000);
+
+        setTimeout(() => {
+          window.location.href = "https://manik2375.netlify.app/";
+        }, 3000);
+      }
+      console.log("This is 404 page, what are you expecting?");
+
+      // Hosted there because of netlify's cool features :P
+    </script>
+  </body>
+</html>
