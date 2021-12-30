@@ -76,11 +76,18 @@
         let main = document.querySelector("main");
         let elem = document.createElement("p");
 
-        elem.innerText = "Redirecting to main site in 3 seconds...";
+        elem.innerHTML = "Redirecting to main site in <b id='seconds'>3</b> seconds...";
 
         elem.className = "redirect-msg";
 
         main.append(elem);
+
+        setInterval(() => {
+            let secondelem = document.getElementById('seconds');
+
+            if (!+secondelem.innerText) return;
+            document.getElementById('seconds').innerText-- 
+        }, 1000);
 
         setTimeout(() => {
           window.location.href = "https://manik2375.netlify.app/";
