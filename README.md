@@ -1,6 +1,6 @@
 # Manik2375.github.io
 For redirection and 404-page 
 
-The main site is here https://manik2375.netlify.app/. Why? Because netlify is cool sunglasses
+The main site is hosted at https://manik2375.me/
 
-Nothing much in this repository...
+Github pages have my projects (mostly frontendmentor)
