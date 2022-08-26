@@ -65,7 +65,7 @@
       <h1>404</h1>
       <p>
         Mate Looks like you lost your way? <br /><a
-          href="https://manik2375.netlify.app/"
+          href="https://manik2375.meta/"
           >Click Here</a
         >
         to go back home.
@@ -75,8 +75,8 @@
     <script>
       "use strict";
       if (window.location == "https://manik2375.github.io/") {
-        let main = document.querySelector("main");
-        let elem = document.createElement("p");
+        const main = document.querySelector("main");
+        const elem = document.createElement("p");
 
         elem.innerHTML = "Redirecting to main site in <b id='seconds'>3</b> seconds...";
 
@@ -85,19 +85,18 @@
         main.append(elem);
 
         setInterval(() => {
-            let secondelem = document.getElementById('seconds');
+            const secondelem = document.getElementById('seconds');
 
             if (!+secondelem.innerText) return;
             document.getElementById('seconds').innerText-- 
         }, 1000);
 
         setTimeout(() => {
-          window.location.href = "https://manik2375.netlify.app/";
+          window.location.href = "https://manik2375.me/";
         }, 3000);
       }
       console.log("This is 404 page, what are you expecting?");
 
-      // Hosted there because of netlify's cool features :P
     </script>
   </body>
 </html>
